@@ -1,0 +1,101 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.App {
+  text-align: center;
+  direction: rtl; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white; }
+
+.App-title {
+  font-size: 1.5em; }
+
+.App-intro {
+  font-size: large; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@font-face {
+  font-family: "Drugulin";
+  src: url(../fonts/drugulinclm-bold-webfont.woff) format("woff"), url(../fonts/drugulinclm-bold-webfont.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Drugulin";
+  src: url(../fonts/drugulinclm-bolditalic-webfont.woff) format("woff"), url(../fonts/drugulinclm-bolditalic-webfont.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+body {
+  direction: rtl; }
+
+.editor-wrap {
+  display: flex; }
+
+.text-box {
+  font-family: "Drugulin", "Arial", sans-serif;
+  padding: 0.3em;
+  border: 1px black solid;
+  background: #ededed;
+  width: 25em;
+  min-height: 6em;
+  color: #121212;
+  font-size: 1.8em; }
+
+.menu {
+  padding: 0.3em;
+  border: 1px black solid;
+  height: 6em;
+  font-size: 1.8em; }
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.type.כותרת {
+  color: #aa7700; }
+  .type.כותרת.active {
+    background-color: #aa7700; }
+
+.type.אומר {
+  color: #aa0000; }
+  .type.אומר.active {
+    background-color: #aa0000; }
+
+.type.מקרה {
+  color: #aa0077; }
+  .type.מקרה.active {
+    background-color: #aa0077; }
+
+.type.דין {
+  color: #007700; }
+  .type.דין.active {
+    background-color: #007700; }
+
+.type.טעם {
+  color: #3355aa; }
+  .type.טעם.active {
+    background-color: #3355aa; }
+
+.type.active {
+  color: white; }
+
+.menu li {
+  cursor: pointer; }
