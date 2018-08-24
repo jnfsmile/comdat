@@ -4,7 +4,6 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
@@ -21,15 +20,6 @@
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @font-face {
@@ -78,6 +68,10 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+button {
+  font-size: 1.2em;
 }
 
 $koteret: #aa7700;

@@ -3,5 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-@import 'App';
-@import 'MenuButton';
+@import "App";
+@import "MenuButton";
+@import "SRDStyles";
+@import "../../../node_modules/storm-react-diagrams/dist/style.min.css";
