@@ -52,19 +52,28 @@ class App extends Component {
         // modify() works on the focus of the selection
         const endNode = sel.focusNode,
           endOffset = sel.focusOffset;
+        const text = sel.toString();
         sel.collapse(sel.anchorNode, sel.anchorOffset);
 
         var direction = [];
+        let startPad = 0;
+        let endPad = 0;
         if (backwards) {
           direction = ["backward", "forward"];
+          endPad = (text.match(/^[^א-ת]+/) || [''])[0].length;
+          startPad = (text.match(/[^א-ת]+$/) || [''])[0].length;
         } else {
           direction = ["forward", "backward"];
+          startPad = (text.match(/^[^א-ת]+/) || [''])[0].length;
+          endPad = (text.match(/[^א-ת]+$/) || [''])[0].length;
         }
 
-        sel.modify("move", direction[0], "character");
+        for (let i = 0; i <= startPad; i++)
+          sel.modify("move", direction[0], "character");
         sel.modify("move", direction[1], "word");
         sel.extend(endNode, endOffset);
-        sel.modify("extend", direction[1], "character");
+        for (let i = 0; i <= endPad; i++)
+          sel.modify("extend", direction[1], "character");
         sel.modify("extend", direction[0], "word");
       }
     } else if ((sel = document.selection) && sel.type !== "Control") {
