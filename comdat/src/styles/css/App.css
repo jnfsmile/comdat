@@ -44,7 +44,10 @@ body {
   width: 25em;
   min-height: 6em;
   color: #121212;
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  cursor: not-allowed; }
+  .text-box.active {
+    cursor: text; }
 
 .menu {
   padding: 0.3em;
@@ -87,5 +90,3 @@ button {
 
 .type.active {
   color: white; }
-
-/*# sourceMappingURL=App.css.map */

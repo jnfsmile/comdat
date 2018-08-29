@@ -56,6 +56,11 @@ body {
 
   color: #121212;
   font-size: 1.8em;
+  cursor: not-allowed;
+
+  &.active {
+    cursor: text;
+  }
 }
 .menu {
   padding: 0.3em;

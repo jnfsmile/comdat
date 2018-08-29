@@ -132,9 +132,18 @@ class App extends Component {
           <h1 className="App-title">כאמד"ט</h1>
         </header>
         <div className="editor-wrap">
+          <div className="menu">
+            <ul>
+              {this.renderMenuButton("כותרת", "#AA7700")}
+              {this.renderMenuButton("אומר", "#AA0000")}
+              {this.renderMenuButton("מקרה", "#AA0077")}
+              {this.renderMenuButton("דין", "#00AA00")}
+              {this.renderMenuButton("טעם", "#3355AA")}
+            </ul>
+          </div>
           <div
             id="mishna-text"
-            className="text-box"
+            className={"text-box" + (this.state.active ? " active" : "")}
             contentEditable="true"
             onMouseUp={() => this.selectText()}
           >
@@ -158,15 +167,6 @@ class App extends Component {
             רבי שמעון בן אלעזר אומר:
             <br />
             כל כלי אנפוריא אינו חייב להכריז.
-          </div>
-          <div className="menu">
-            <ul>
-              {this.renderMenuButton("כותרת", "#AA7700")}
-              {this.renderMenuButton("אומר", "#AA0000")}
-              {this.renderMenuButton("מקרה", "#AA0077")}
-              {this.renderMenuButton("דין", "#00AA00")}
-              {this.renderMenuButton("טעם", "#3355AA")}
-            </ul>
           </div>
         </div>
         <button

@@ -21,13 +21,12 @@ class Chart extends Component {
     const nodes = [];
 
     //3) create default nodes
-    console.log(this.props.nodes);
     this.props.nodes.forEach(n => {
       const node = new DefaultNodeModel(n.text, n.color);
       const port = node.addOutPort(" ");
       const port2 = node.addInPort(" ");
       node.setPosition(pos[0], pos[1]);
-      pos[1] += 60;
+      pos[1] += 100;
       nodes.push(node);
     });
 
