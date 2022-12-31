@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4",
+    "react-scripts": "5.0.1",
     "storm-react-diagrams": "^5.2.1"
   },
   "scripts": {
@@ -18,6 +18,6 @@
   },
   "devDependencies": {
     "node-sass": "^7.0.0",
-    "sass-loader": "^7.0.3"
+    "sass-loader": "^13.2.0"
   }
 }
